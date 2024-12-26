@@ -1,9 +1,14 @@
 {
     "plugins": [
     {
-        "name": "5sing",
-        "url": "http://adad23u.appinstall.life/dist/5sing/index.js",
-        "version": "0.1.1"
+        "name": "QQ音乐",
+        "url": "http://adad23u.appinstall.life/dist/qq/index.js",
+        "version": "0.2.1"
+    },
+     {
+        "name": "网易云",
+        "url": "http://adad23u.appinstall.life/dist/netease/index.js",
+        "version": "0.2.1"
     },
     {
         "name": "酷我",
@@ -14,17 +19,21 @@
         "name": "酷狗",
         "url": "http://adad23u.appinstall.life/dist/kugou/index.js",
         "version": "0.1.4"
+    },{
+        "name": "WebDAV",
+        "url": "https://gitee.com/maotoumao/MusicFreePlugins/raw/v0.1/dist/webdav/index.js",
+        "version": "0.0.2"
+    },{
+        "name": "5sing",
+        "url": "http://adad23u.appinstall.life/dist/5sing/index.js",
+        "version": "0.1.1"
     },
     {
         "name": "猫耳FM",
         "url": "http://adad23u.appinstall.life/dist/maoerfm/index.js",
         "version": "0.1.3"
     },
-    {
-        "name": "网易云",
-        "url": "http://adad23u.appinstall.life/dist/netease/index.js",
-        "version": "0.2.1"
-    },
+   
     {
         "name": "千千音乐",
         "url": "http://adad23u.appinstall.life/dist/qianqian/index.js",
@@ -40,11 +49,7 @@
         "url": "http://adad23u.appinstall.life/dist/qmkg/index.js",
         "version": "0.1.0"
     },
-    {
-        "name": "QQ音乐",
-        "url": "http://adad23u.appinstall.life/dist/qq/index.js",
-        "version": "0.2.1"
-    },
+    
     {
         "name": "Audiomack",
         "url": "https://gitee.com/maotoumao/MusicFreePlugins/raw/v0.1/dist/audiomack/index.js",
@@ -89,11 +94,6 @@
         "name": "猫耳FM",
         "url": "https://gitee.com/maotoumao/MusicFreePlugins/raw/v0.1/dist/maoerfm/index.js",
         "version": "0.1.4"
-    },
-    {
-        "name": "WebDAV",
-        "url": "https://gitee.com/maotoumao/MusicFreePlugins/raw/v0.1/dist/webdav/index.js",
-        "version": "0.0.2"
     },
     {
         "name": "udio",
