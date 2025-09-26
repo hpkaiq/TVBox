@@ -5,7 +5,7 @@ const cheerio = require("cheerio");
 
 async function kuGeCi(query) {
     let response = await axios.default.get("https://www.kugeci.com/search?q=" + encodeURIComponent(query));
-    const $ = cheerio.load(response.data || "")
+    const $ = cheerio.load(response.data || "");
     const elements = $("#tablesort>tbody>tr");
     if (elements.length === 0) {
         return [];
@@ -16,7 +16,7 @@ async function kuGeCi(query) {
             title: $(el).find("tr>td:nth-child(2) a").text(),
             id: $(el).find("tr>td:nth-child(2) a").attr("href"),
             artist: $(el).find("tr>td:nth-child(3) a").text(),
-        }
+        };
     }).get();
     return result;
 }
@@ -40,14 +40,14 @@ async function search(query, page, type) {
     return {
         isEnd: true,
         data: await kuGeCi(title),// 酷歌词接口
-    }
+    };
 }
     
 async function getLyric(musicItem) {
-    let response = await axios.default.get(musicItem.id)
+    let response = await axios.default.get(musicItem.id);
     return {
         rawLrc: cheerio.load(response.data)("#lyricsContainer").text()
-    }
+    };
 }
 
 module.exports = {
@@ -58,4 +58,4 @@ module.exports = {
     supportedSearchType: ['lyric'],
     search,
     getLyric
-}
+};
