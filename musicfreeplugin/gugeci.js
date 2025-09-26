@@ -54,6 +54,7 @@ module.exports = {
     platform: "酷歌词",
     author: 'QQ频道@LY+',
     version: "0.0.0",
+    srcUrl: 'https://gproxy.hpkaiq.com/gp/https://raw.githubusercontent.com/hpkaiq/TVBox/refs/heads/main/musicfreeplugin/gugeci.js',
     cacheControl: "no-store",
     supportedSearchType: ['lyric'],
     search,
