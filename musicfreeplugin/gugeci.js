@@ -4,7 +4,20 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 
 async function kuGeCi(query) {
-    let response = await axios.default.get("https://www.kugeci.com/search?q=" + encodeURIComponent(query));
+    let response = await axios.default.get("https://www.kugeci.com/search?q=" + encodeURIComponent(query), {
+    headers: {
+        'User-Agent': 'Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36',
+        'Accept': 'text/html,application/xhtml+xml,*/*',
+        'Accept-Encoding': 'gzip, deflate, br', // 必须支持压缩
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Connection': 'keep-alive',
+        'Referer': 'https://www.kugeci.com/',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'same-origin'
+    }
+});
     const $ = cheerio.load(response.data || "");
     const elements = $("#tablesort>tbody>tr");
     if (elements.length === 0) {
@@ -44,7 +57,20 @@ async function search(query, page, type) {
 }
     
 async function getLyric(musicItem) {
-    let response = await axios.default.get(musicItem.id);
+    let response = await axios.default.get(musicItem.id, {
+    headers: {
+        'User-Agent': 'Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36',
+        'Accept': 'text/html,application/xhtml+xml,*/*',
+        'Accept-Encoding': 'gzip, deflate, br', // 必须支持压缩
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Connection': 'keep-alive',
+        'Referer': 'https://www.kugeci.com/',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'same-origin'
+    }
+});
     return {
         rawLrc: cheerio.load(response.data)("#lyricsContainer").text()
     };
